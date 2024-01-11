@@ -1,0 +1,30 @@
+/* styles.scss */
+
+// .ion.content {
+//   background-image: url('/src/assets/icon/imgp.jpg'); /* Ruta a tu imagen */
+//   /* Otros estilos opcionales */
+//   background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+//   /* background-repeat: no-repeat; */
+//   /* background-position: center center; */
+// }
+ion-content {
+  --background: #fff url(/assets/icon/imgp.png) no-repeat center center / cover;
+}
+
+.centrado-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.marco {
+  border: 3px solid gray;
+  padding: 16px;
+}
+
+.alinear-centro {
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}

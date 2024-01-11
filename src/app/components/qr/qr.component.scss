@@ -1,0 +1,33 @@
+ion-content {
+  --background: #fff url(/assets/icon/imgp.png) no-repeat center center / cover;
+}
+
+.marco {
+  --background: #fff url(/assets/icon/imgp.png) no-repeat center center / cover;
+}
+
+.ion-padding-bottom{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.centrar-boton {
+  text-align: center;
+}
+
+
+@keyframes desplazamiento {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.desplazar-texto {
+  white-space: nowrap;
+  overflow: hidden;
+  // animation: desplazamiento 10s linear backwards;
+  animation: desplazamiento 5s linear backwards;
+}
