@@ -6,33 +6,24 @@ import { DataBaseService } from 'src/app/services/data-base.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 
+
 @Component({
-  selector: 'app-ingreso',
-  templateUrl: './ingreso.page.html',
-  styleUrls: ['./ingreso.page.scss'],
+  selector: 'app-e404',
+  templateUrl: './e404.page.html',
+  styleUrls: ['./e404.page.scss'],
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule]
 })
-export class IngresoPage implements OnInit {
-
-  correo = 'atorres@duocuc.cl';
-  password = '1234';
-  passwordc = "";
+export class E404Page implements OnInit {
 
   constructor(private bd: DataBaseService, private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
-    this.bd.crearUsuariosDePrueba().then(async () => {
-      await this.bd.leerUsuarios();
-    });
   }
 
-  ingresar(){
-    this.authService.login(this.correo, this.password);
-  }
-
-  passwordchange(){
+  ingreso(){
     //this.authService.inicio(this.correo, this.passwordc);
-    this.router.navigate(['/password'])
+    this.router.navigate(['/ingreso'])
   }
+
 }

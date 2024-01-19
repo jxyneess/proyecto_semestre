@@ -7,32 +7,23 @@ import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-ingreso',
-  templateUrl: './ingreso.page.html',
-  styleUrls: ['./ingreso.page.scss'],
+  selector: 'app-password',
+  templateUrl: './password.page.html',
+  styleUrls: ['./password.page.scss'],
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule]
 })
-export class IngresoPage implements OnInit {
+export class PasswordPage implements OnInit {
 
-  correo = 'atorres@duocuc.cl';
-  password = '1234';
-  passwordc = "";
+  correo = "atorres@duocuc.cl";
 
   constructor(private bd: DataBaseService, private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
-    this.bd.crearUsuariosDePrueba().then(async () => {
-      await this.bd.leerUsuarios();
-    });
-  }
-
-  ingresar(){
-    this.authService.login(this.correo, this.password);
   }
 
   passwordchange(){
-    //this.authService.inicio(this.correo, this.passwordc);
-    this.router.navigate(['/password'])
+    this.router.navigate(['/ingreso'])
   }
+
 }

@@ -34,4 +34,16 @@ export const routes: Routes = [
     path: 'incorrecto',
     loadComponent: () => import('./pages/incorrecto/incorrecto.page').then( m => m.IncorrectoPage)
   },
+  {
+    path: 'password',
+    loadComponent: () => import('./pages/password/password.page').then( m => m.PasswordPage)
+  },
+  {
+    path: '**',
+    loadComponent: () => import('./pages/e404/e404.page').then( m => m.E404Page)
+  },
+  {
+    path: 'e404',
+    loadComponent: () => import('./pages/e404/e404.page').then( m => m.E404Page)
+  },
 ];

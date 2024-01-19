@@ -10,6 +10,9 @@ import { showToast } from '../tools/message-routines';
   providedIn: 'root'
 })
 export class AuthService {
+  passwordc(correo: string, passwordc: string) {
+    throw new Error('Method not implemented.');
+  }
 
   keyUsuario = 'USUARIO_AUTENTICADO';
   usuarioAutenticado = new BehaviorSubject<Usuario | null>(null);
